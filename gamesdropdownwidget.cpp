@@ -21,3 +21,9 @@ void GamesDropdownWidget::add_games(const QStringList& titles)
 	ui->games_dropdown_2->addItem(GamesDropdownWidget::GLOBAL_VALUE);
 	ui->games_dropdown_2->addItems(titles);
 }
+
+void GamesDropdownWidget::on_refresh_button_2_clicked()
+{
+	emit refresh_games();
+}
+

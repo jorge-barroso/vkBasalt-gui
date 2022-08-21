@@ -6,24 +6,33 @@
 #include "steamgamesmanager.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui
+{
+	class MainWindow;
+}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
-public:
-    MainWindow(const QDir& config_dir, QWidget* parent = nullptr);
-    ~MainWindow();
+	public:
+		MainWindow(const QDir& config_dir, QWidget* parent = nullptr);
 
-private:
-    Ui::MainWindow *ui;
+		~MainWindow();
 
-	QDir config_dir;
+	private slots:
 
-	SteamGamesManager steam_games_manager;
+		void load_games();
 
-		void load_steam_games();
+	private:
+		Ui::MainWindow* ui;
+
+		QDir config_dir;
+
+		SteamGamesManager steam_games_manager;
+
+		void load_steam_games(const bool refresh);
 };
+
 #endif // MAINWINDOW_H

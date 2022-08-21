@@ -45,6 +45,8 @@ SteamGamesManager::~SteamGamesManager()
 
 void SteamGamesManager::refresh()
 {
+	games.clear();
+
 	// Search Steam Games Library
 	QDirIterator it(steam_library_path, QStringList() << "appmanifest_*", QDir::Files, QDirIterator::Subdirectories);
 

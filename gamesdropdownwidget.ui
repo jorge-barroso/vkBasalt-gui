@@ -31,7 +31,7 @@
     <widget class="QComboBox" name="games_dropdown_2">
      <item>
       <property name="text">
-       <string>Global (Whole System)</string>
+       <string>Global (System)</string>
       </property>
      </item>
     </widget>

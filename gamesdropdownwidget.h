@@ -21,6 +21,7 @@ class GamesDropdownWidget : public QWidget
 
 	private:
 		Ui::GamesDropdownWidget* ui;
+		static const QString GLOBAL_VALUE;
 };
 
 #endif // GAMESDROPDOWNWIDGET_H

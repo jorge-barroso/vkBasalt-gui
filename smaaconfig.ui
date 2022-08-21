@@ -88,7 +88,7 @@
    <item row="1" column="3">
     <widget class="QLabel" name="label_8">
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- Luma - Default&lt;/p&gt;&lt;p&gt;- Colour - M&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#f0f3f6; background-color:#0a0c10;&quot;&gt;ight catch more edges, but is more expensive&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changes the edge detection shader&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Luma  - default&lt;/p&gt;&lt;p&gt;Colour - might catch more edges, but is more expensive&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
       <string>?</string>

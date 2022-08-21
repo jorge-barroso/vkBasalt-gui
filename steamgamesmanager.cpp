@@ -91,7 +91,6 @@ QStringList SteamGamesManager::get_game_titles()
 {
 	QStringList game_titles;
 	std::transform(games.begin(), games.end(), std::back_inserter(game_titles), SteamGamesManager::get_game_title);
-	qDebug() << game_titles;
 	return game_titles;
 }
 
@@ -134,9 +133,6 @@ Game* SteamGamesManager::extract_game_data(QFile& file)
 		}
 	}
 
-	qDebug() << app_name;
-	qDebug() << app_common_path;
-	qDebug() << steam_id;
 	return new Game
 			{
 					app_name,

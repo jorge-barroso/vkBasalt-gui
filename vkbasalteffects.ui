@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VKBasaltEffects</class>
+ <widget class="QWidget" name="VKBasaltEffects">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="10,0,9,10">
+   <item row="2" column="0" colspan="4">
+    <widget class="FXAAConfig" name="fxaa_config" native="true"/>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="CASConfig" name="cas_config" native="true"/>
+   </item>
+   <item row="5" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="4">
+    <widget class="DLSConfig" name="dls_config" native="true"/>
+   </item>
+   <item row="4" column="0" colspan="4">
+    <widget class="LUTConfig" name="lut_config" native="true"/>
+   </item>
+   <item row="5" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" colspan="4">
+    <widget class="SMAAConfig" name="smaa_config" native="true"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="shortcut_label">
+     <property name="text">
+      <string>Shortcut Key</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QComboBox" name="shortcut_keys"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CASConfig</class>
+   <extends>QWidget</extends>
+   <header>casconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DLSConfig</class>
+   <extends>QWidget</extends>
+   <header>dlsconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FXAAConfig</class>
+   <extends>QWidget</extends>
+   <header>fxaaconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LUTConfig</class>
+   <extends>QWidget</extends>
+   <header>lutconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SMAAConfig</class>
+   <extends>QWidget</extends>
+   <header>smaaconfig.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

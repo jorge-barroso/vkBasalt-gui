@@ -8,6 +8,7 @@
 #include <QString>
 
 struct Game {
+	QString title;
 	QString path;
 
 	bool cas_enabled;

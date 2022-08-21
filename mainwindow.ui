@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="1" column="0">
      <widget class="QTabWidget" name="tabs_widget">
       <property name="currentIndex">
        <number>0</number>
@@ -31,6 +31,12 @@
        </attribute>
       </widget>
      </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="GamesDropdownWidget" name="games_dropdown" native="true"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="BottomMenuBar" name="bottom_menu" native="true"/>
     </item>
    </layout>
   </widget>
@@ -57,6 +63,18 @@
    <class>VKBasaltEffects</class>
    <extends>QWidget</extends>
    <header>vkbasalteffects.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GamesDropdownWidget</class>
+   <extends>QWidget</extends>
+   <header>gamesdropdownwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BottomMenuBar</class>
+   <extends>QWidget</extends>
+   <header>bottommenubar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

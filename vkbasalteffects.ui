@@ -13,196 +13,56 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0,0,0,0,0">
-   <item row="11" column="6">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>Save All</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="4">
-    <widget class="QCheckBox" name="checkBox">
-     <property name="text">
-      <string>Enable on Startup</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="5">
-    <spacer name="horizontalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="11" column="2">
-    <widget class="QComboBox" name="shortcut_keys">
-     <item>
-      <property name="text">
-       <string>None</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Home</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>End</string>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item row="11" column="1">
-    <widget class="QLabel" name="shortcut_label">
-     <property name="text">
-      <string>Shortcut Key</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="0">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="11" column="3">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="11" column="7">
-    <spacer name="horizontalSpacer_6">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="0" colspan="8">
-    <widget class="QWidget" name="widget" native="true">
-     <layout class="QGridLayout" name="gridLayout_2" columnstretch="2,3,0,2,0">
-      <item row="0" column="1">
-       <widget class="QComboBox" name="comboBox">
-        <item>
-         <property name="text">
-          <string>Global (Whole System)</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <spacer name="horizontalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>↻</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="6">
+  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+   <item row="0" column="0" colspan="2">
     <widget class="CASConfig" name="cas_config" native="true"/>
    </item>
-   <item row="2" column="1" colspan="6">
+   <item row="4" column="0" colspan="2">
+    <widget class="FXAAConfig" name="fxaa_config" native="true"/>
+   </item>
+   <item row="1" column="0" colspan="2">
     <widget class="Line" name="line">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item row="3" column="1" colspan="6">
-    <widget class="DLSConfig" name="dls_config" native="true"/>
-   </item>
-   <item row="5" column="1" colspan="6">
-    <widget class="FXAAConfig" name="fxaa_config" native="true"/>
-   </item>
-   <item row="7" column="1" colspan="6">
-    <widget class="SMAAConfig" name="smaa_config" native="true"/>
-   </item>
-   <item row="9" column="1" colspan="6">
-    <widget class="LUTConfig" name="lut_config" native="true"/>
-   </item>
-   <item row="4" column="1" colspan="6">
-    <widget class="Line" name="line_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1" colspan="6">
-    <widget class="Line" name="line_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1" colspan="6">
+   <item row="7" column="0" colspan="2">
     <widget class="Line" name="line_4">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item row="10" column="1" colspan="6">
+   <item row="3" column="0" colspan="2">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="DLSConfig" name="dls_config" native="true"/>
+   </item>
+   <item row="9" column="0" colspan="2">
     <widget class="Line" name="line_5">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+   </item>
+   <item row="8" column="0" colspan="2">
+    <widget class="LUTConfig" name="lut_config" native="true"/>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="SMAAConfig" name="smaa_config" native="true"/>
    </item>
   </layout>
  </widget>

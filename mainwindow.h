@@ -23,5 +23,7 @@ private:
 	QDir config_dir;
 
 	SteamGamesManager steam_games_manager;
+
+		void load_steam_games();
 };
 #endif // MAINWINDOW_H

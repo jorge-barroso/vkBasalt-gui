@@ -42,7 +42,7 @@ set(PROJECT_SOURCES
         lutconfig.ui
         smaaconfig.cpp
         smaaconfig.h
-        smaaconfig.ui)
+        smaaconfig.ui steamgamesmanager.cpp SteamGamesManager.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(vkBasalt-gui

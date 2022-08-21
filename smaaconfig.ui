@@ -98,7 +98,18 @@
     </widget>
    </item>
    <item row="1" column="3">
-    <widget class="QComboBox" name="comboBox"/>
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>Luma</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Colour</string>
+      </property>
+     </item>
+    </widget>
    </item>
    <item row="5" column="3">
     <widget class="QSlider" name="horizontalSlider_4">

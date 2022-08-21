@@ -13,7 +13,34 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,1">
+  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,5,0,10">
+   <item row="5" column="3">
+    <widget class="QLabel" name="label_12">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies how much sharp corners will be rounded&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 100]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;25 is a reasonable value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLabel" name="label_10">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum steps performed in the horizontal/vertical pattern searches&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 112]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;4 - low&lt;/p&gt;&lt;p&gt;8 - medium&lt;/p&gt;&lt;p&gt;16 - high&lt;/p&gt;&lt;p&gt;32 - ultra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="2">
     <widget class="QLabel" name="label_4">
      <property name="text">
@@ -21,31 +48,10 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Enable</string>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="2">
     <widget class="QLabel" name="label_6">
      <property name="text">
       <string>Max Search Steps Diagonal</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Edge Detection</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="2">
-    <widget class="QLabel" name="label_7">
-     <property name="text">
-      <string>Corner Rounding</string>
      </property>
     </widget>
    </item>
@@ -62,6 +68,33 @@
      </property>
     </spacer>
    </item>
+   <item row="0" column="4">
+    <widget class="QCheckBox" name="checkBox">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QLabel" name="label_11">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum steps performed in the diagonal pattern searches&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 20]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;0 - low, medium&lt;/p&gt;&lt;p&gt;8 - high&lt;/p&gt;&lt;p&gt;16 - ultra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLabel" name="label_8">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- Luma - Default&lt;/p&gt;&lt;p&gt;- Colour - M&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#f0f3f6; background-color:#0a0c10;&quot;&gt;ight catch more edges, but is more expensive&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
    <item row="3" column="2">
     <widget class="QLabel" name="label_5">
      <property name="text">
@@ -69,59 +102,79 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="3">
-    <widget class="QCheckBox" name="checkBox">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="3">
+   <item row="2" column="4">
     <widget class="QSlider" name="horizontalSlider_2">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item row="3" column="3">
-    <widget class="QSlider" name="horizontalSlider_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="3">
-    <widget class="QSlider" name="horizontalSlider">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QComboBox" name="comboBox">
-     <item>
-      <property name="text">
-       <string>Luma</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Colour</string>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item row="5" column="3">
+   <item row="5" column="4">
     <widget class="QSlider" name="horizontalSlider_4">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
+   <item row="3" column="4">
+    <widget class="QSlider" name="horizontalSlider_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="label_7">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Corner Rounding</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLabel" name="label_9">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lowering this value you will be able to detect more edges at the expense of performance.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 5]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;1 is a reasonable value, and allows to catch most visible edges.&lt;/p&gt;&lt;p&gt;0.5 is a rather overkill value, that allows to catch 'em all.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Edge Detection</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string extracomment="default">Luma</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string extracomment="might catch more edges, but is more expensive">Colour</string>
+      </property>
+     </item>
+    </widget>
+   </item>
    <item row="0" column="0" rowspan="6">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>SMAA Config</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Enable</string>
      </property>
     </widget>
    </item>

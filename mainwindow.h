@@ -5,9 +5,8 @@
 #include <QDir>
 #include <map>
 #include "steamgamesmanager.h"
-#include "gameproviders.h"
 
-using GamesReferences = std::vector<std::pair<GameProviders, int>>;
+using GamesReferences = std::vector<std::pair<GamesManager*, int>>;
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -29,7 +28,7 @@ class MainWindow : public QMainWindow
 
 		void refresh_games();
 
-		void load_games();
+		void change_game_config(int index);
 
 	private:
 		Ui::MainWindow* ui;

@@ -29,9 +29,10 @@ void MainWindow::refresh_games()
 void MainWindow::load_games(const bool refresh)
 {
 	QStringList games{ load_steam_games(refresh) };
+	GamesManager* steam_manager_ptr{ &steam_games_manager };
 	for (int i = 0; i < games.length(); ++i)
 	{
-		std::pair<GameProviders, int> entry{ GameProviders::Steam, i };
+		std::pair<GamesManager*, int> entry{ steam_manager_ptr, i };
 		all_games.emplace_back(entry);
 	}
 
@@ -46,5 +47,13 @@ QStringList MainWindow::load_steam_games(const bool refresh)
 	}
 
 	return steam_games_manager.get_game_titles();
+}
+
+void MainWindow::change_game_config(const int index)
+{
+	std::pair<GamesManager*, int> game{ all_games[index] };
+	Game* game_configs{ game.first->get_game_configs(game.second) };
+//	ui->vkbasalt_effects->set_settings(game_configs);
+//	ui->reshade_filters->set_settings(game_configs);
 }
 

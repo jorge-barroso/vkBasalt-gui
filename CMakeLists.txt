@@ -53,7 +53,6 @@ set(PROJECT_SOURCES
         bottommenubar.cpp
         bottommenubar.h
         bottommenubar.ui
-        gameproviders.h
         gamesmanager.h
         gamesmanager.cpp)
 

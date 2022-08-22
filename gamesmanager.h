@@ -17,8 +17,11 @@ class GamesManager
 
 		QStringList get_game_titles();
 
+		Game* get_game_configs(int i);
+
 	protected:
 		const QString library_path;
+
 		QFile games_list_path;
 
 		static const QString GAMES_LIST_FILE;

@@ -37,3 +37,13 @@ QStringList GamesManager::get_game_titles()
 	std::transform(games.begin(), games.end(), std::back_inserter(game_titles), [this](auto && PH1) { return get_game_title(std::forward<decltype(PH1)>(PH1)); });
 	return game_titles;
 }
+
+Game* GamesManager::get_game_configs(int i)
+{
+	if(i > games.size())
+	{
+		return nullptr;
+	}
+
+	return games[i];
+}

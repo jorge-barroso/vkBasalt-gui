@@ -11,19 +11,18 @@
 #include <QMessageBox>
 #include "steamgamesmanager.h"
 
-const QString SteamGamesManager::GAMES_LIST_FILE{ "games_list.txt" };
 const QString SteamGamesManager::STEAM_CUSTOM_LIBRARY_PATH{ "/Steam/steamapps" };
 const QString SteamGamesManager::STEAM_APP_ID_HEADER{ "appid" };
 const QString SteamGamesManager::STEAM_NAME_HEADER{ "name" };
 const int SteamGamesManager::STEAM_VALID_LINE_COMPONENTS{ 2 };
 
 SteamGamesManager::SteamGamesManager(const QDir& dir)
-		: games_list_path{ dir.absolutePath() + "/" + SteamGamesManager::GAMES_LIST_FILE }, steam_library_path{
-		QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + STEAM_CUSTOM_LIBRARY_PATH }
+		: GamesManager(dir)
+		, steam_library_path{QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + STEAM_CUSTOM_LIBRARY_PATH }
 {
 	if (!games_list_path.exists())
 	{
-		refresh();
+		this->refresh();
 	}
 	else
 	{
@@ -68,32 +67,6 @@ void SteamGamesManager::refresh()
 
 		games.emplace_back(game);
 	}
-}
-
-void SteamGamesManager::load_list()
-{
-	if (!games_list_path.open(QIODevice::ReadOnly))
-	{
-		QMessageBox::warning(nullptr, QApplication::translate("Steam Games", "Could not load games"),
-							 games_list_path.errorString());
-	}
-
-	QTextStream stream(&games_list_path);
-	while (!stream.atEnd())
-	{
-		Game* game = new Game{ };
-		stream >> game;
-		games.emplace_back(game);
-	}
-
-	games_list_path.close();
-}
-
-QStringList SteamGamesManager::get_game_titles()
-{
-	QStringList game_titles;
-	std::transform(games.begin(), games.end(), std::back_inserter(game_titles), SteamGamesManager::get_game_title);
-	return game_titles;
 }
 
 QString SteamGamesManager::get_game_title(const Game* game)

@@ -52,7 +52,10 @@ set(PROJECT_SOURCES
         gamesdropdownwidget.ui
         bottommenubar.cpp
         bottommenubar.h
-        bottommenubar.ui)
+        bottommenubar.ui
+        gameproviders.h
+        gamesmanager.h
+        gamesmanager.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(vkBasalt-gui

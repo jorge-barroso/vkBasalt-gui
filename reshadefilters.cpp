@@ -5,10 +5,20 @@
 #include "reshadefilters.h"
 
 ReshadeFilters::ReshadeFilters()
-	: QWidget()
+	: SettingsWidget()
 	, ui(new Ui::ReshadeFilters)
 {
 	ui->setupUi(this);
 }
 
 ReshadeFilters::~ReshadeFilters() = default;
+
+void ReshadeFilters::update_game_settings()
+{
+
+}
+
+void ReshadeFilters::set_settings(Game* game)
+{
+
+}

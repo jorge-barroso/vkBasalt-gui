@@ -3,10 +3,7 @@
 #include "./ui_mainwindow.h"
 
 MainWindow::MainWindow(const QDir& config_dir, QWidget* parent)
-		: QMainWindow(parent)
-		, ui(new Ui::MainWindow)
-		, config_dir{ config_dir }
-		, steam_games_manager(config_dir)
+		: QMainWindow(parent), ui(new Ui::MainWindow), config_dir{ config_dir }, steam_games_manager(config_dir)
 {
 	ui->setupUi(this);
 
@@ -51,9 +48,11 @@ QStringList MainWindow::load_steam_games(const bool refresh)
 
 void MainWindow::change_game_config(const int index)
 {
-	std::pair<GamesManager*, int> game{ all_games[index] };
+	// TODO still need to figure out the global settings
+	std::pair<GamesManager*, int> game{ all_games[index - 1] };
 	Game* game_configs{ game.first->get_game_configs(game.second) };
-//	ui->vkbasalt_effects->set_settings(game_configs);
-//	ui->reshade_filters->set_settings(game_configs);
+	qDebug() << "Changing Game to " << game_configs->title;
+	ui->vkbasalt_effects->set_settings(game_configs);
+	ui->reshade_filters->set_settings(game_configs);
 }
 

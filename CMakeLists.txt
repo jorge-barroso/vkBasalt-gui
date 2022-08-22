@@ -54,7 +54,7 @@ set(PROJECT_SOURCES
         bottommenubar.h
         bottommenubar.ui
         gamesmanager.h
-        gamesmanager.cpp)
+        gamesmanager.cpp settingswidget.cpp settingswidget.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(vkBasalt-gui

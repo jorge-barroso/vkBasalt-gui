@@ -6,6 +6,7 @@
 #define VKBASALTEFFECTS_H
 
 #include "ui_vkbasalteffects.h"
+#include "settingswidget.h"
 #include <QWidget>
 
 namespace Ui
@@ -13,7 +14,7 @@ namespace Ui
 	class VKBasaltEffects;
 }
 
-class VKBasaltEffects : public QWidget
+class VKBasaltEffects : public SettingsWidget
 {
 	Q_OBJECT
 
@@ -22,10 +23,9 @@ class VKBasaltEffects : public QWidget
 
 		~VKBasaltEffects() override;
 
-	private slots:
-		void on_comboBox_currentIndexChanged(int index);
+		void update_game_settings() override;
 
-		void on_pushButton_clicked();
+		void set_settings(Game* game) override;
 
 	private:
 		Ui::VKBasaltEffects* ui;

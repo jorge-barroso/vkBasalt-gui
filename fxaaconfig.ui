@@ -15,28 +15,28 @@
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,1">
    <item row="3" column="2">
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="quality_edge_threshold_min_label">
      <property name="text">
       <string>Quality Edge Threshold Min</string>
      </property>
     </widget>
    </item>
    <item row="0" column="2">
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="enable_label">
      <property name="text">
       <string>Enable</string>
      </property>
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="quality_edge_threshold_label">
      <property name="text">
       <string>Quality Edge Threshold</string>
      </property>
     </widget>
    </item>
    <item row="0" column="0" rowspan="4">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="fxaa_title">
      <property name="text">
       <string>FXAA Config</string>
      </property>
@@ -56,35 +56,35 @@
     </spacer>
    </item>
    <item row="1" column="2">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="quality_subpixel_label">
      <property name="text">
       <string>Quality Subpixel</string>
      </property>
     </widget>
    </item>
    <item row="0" column="3">
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="enable_fxaa_checkbox">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
    <item row="1" column="3">
-    <widget class="QSlider" name="horizontalSlider">
+    <widget class="QSlider" name="quality_subpixel_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="2" column="3">
-    <widget class="QSlider" name="horizontalSlider_2">
+    <widget class="QSlider" name="quality_edge_threshold_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="3" column="3">
-    <widget class="QSlider" name="horizontalSlider_3">
+    <widget class="QSlider" name="quality_edge_threshold_min_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>

@@ -2,18 +2,24 @@
 #define CASCONFIG_H
 
 #include <QWidget>
+#include "settingswidget.h"
 
 namespace Ui {
 class CASConfig;
 }
 
-class CASConfig : public QWidget
+class CASConfig : public SettingsWidget
 {
     Q_OBJECT
 
 public:
     explicit CASConfig(QWidget *parent = nullptr);
-    ~CASConfig();
+
+		void update_game_settings() override;
+
+		void set_settings(Game* game) override;
+
+		~CASConfig();
 
 private:
     Ui::CASConfig *ui;

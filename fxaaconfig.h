@@ -2,12 +2,13 @@
 #define FXAACONFIG_H
 
 #include <QWidget>
+#include "settingswidget.h"
 
 namespace Ui {
 class FXAAConfig;
 }
 
-class FXAAConfig : public QWidget
+class FXAAConfig : public SettingsWidget
 {
     Q_OBJECT
 
@@ -15,7 +16,11 @@ public:
     explicit FXAAConfig(QWidget *parent = nullptr);
     ~FXAAConfig();
 
-private:
+		void update_game_settings() override;
+
+		void set_settings(Game* game) override;
+
+	private:
     Ui::FXAAConfig *ui;
 };
 

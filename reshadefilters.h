@@ -6,6 +6,7 @@
 #define VKBASALT_GUI_RESHADEFILTERS_H
 
 #include "ui_reshadefilters.h"
+#include "settingswidget.h"
 #include <QWidget>
 
 namespace Ui
@@ -13,7 +14,7 @@ namespace Ui
 	class ReshadeFilters;
 }
 
-class ReshadeFilters : public QWidget
+class ReshadeFilters : public SettingsWidget
 {
 	Q_OBJECT
 
@@ -21,6 +22,10 @@ class ReshadeFilters : public QWidget
 		ReshadeFilters();
 
 		~ReshadeFilters() override;
+
+		void update_game_settings() override;
+
+		void set_settings(Game* game) override;
 
 	private:
 		Ui::ReshadeFilters* ui;

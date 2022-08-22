@@ -15,7 +15,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,5,0,10">
    <item row="5" column="3">
-    <widget class="QLabel" name="label_12">
+    <widget class="QLabel" name="corner_rounding_tooltip_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies how much sharp corners will be rounded&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 100]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;25 is a reasonable value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -25,7 +25,7 @@
     </widget>
    </item>
    <item row="3" column="3">
-    <widget class="QLabel" name="label_10">
+    <widget class="QLabel" name="max_search_steps_tooltip_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum steps performed in the horizontal/vertical pattern searches&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 112]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;4 - low&lt;/p&gt;&lt;p&gt;8 - medium&lt;/p&gt;&lt;p&gt;16 - high&lt;/p&gt;&lt;p&gt;32 - ultra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -35,21 +35,21 @@
     </widget>
    </item>
    <item row="4" column="4">
-    <widget class="QSlider" name="horizontalSlider">
+    <widget class="QSlider" name="max_search_steps_diagonal_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="threshold_label">
      <property name="text">
       <string>Threshold</string>
      </property>
     </widget>
    </item>
    <item row="4" column="2">
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="max_search_steps_diagonal_label">
      <property name="text">
       <string>Max Search Steps Diagonal</string>
      </property>
@@ -69,14 +69,14 @@
     </spacer>
    </item>
    <item row="0" column="4">
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="enable_smaa_checkbox">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
    <item row="4" column="3">
-    <widget class="QLabel" name="label_11">
+    <widget class="QLabel" name="max_search_steps_diagonal_tooltip_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum steps performed in the diagonal pattern searches&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 20]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;0 - low, medium&lt;/p&gt;&lt;p&gt;8 - high&lt;/p&gt;&lt;p&gt;16 - ultra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -86,7 +86,7 @@
     </widget>
    </item>
    <item row="1" column="3">
-    <widget class="QLabel" name="label_8">
+    <widget class="QLabel" name="edge_detection_tooltip_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changes the edge detection shader&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Luma  - default&lt;/p&gt;&lt;p&gt;Colour - might catch more edges, but is more expensive&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -96,35 +96,35 @@
     </widget>
    </item>
    <item row="3" column="2">
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="max_search_steps_label">
      <property name="text">
       <string>Max Search Steps</string>
      </property>
     </widget>
    </item>
    <item row="2" column="4">
-    <widget class="QSlider" name="horizontalSlider_2">
+    <widget class="QSlider" name="threshold_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="5" column="4">
-    <widget class="QSlider" name="horizontalSlider_4">
+    <widget class="QSlider" name="corner_rounding_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="3" column="4">
-    <widget class="QSlider" name="horizontalSlider_3">
+    <widget class="QSlider" name="max_search_steps_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="5" column="2">
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="corner_rounding_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -134,7 +134,7 @@
     </widget>
    </item>
    <item row="2" column="3">
-    <widget class="QLabel" name="label_9">
+    <widget class="QLabel" name="threshold_tooltip_label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lowering this value you will be able to detect more edges at the expense of performance.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Range: [0, 5]&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;1 is a reasonable value, and allows to catch most visible edges.&lt;/p&gt;&lt;p&gt;0.5 is a rather overkill value, that allows to catch 'em all.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -144,14 +144,14 @@
     </widget>
    </item>
    <item row="1" column="2">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="edge_detection_label">
      <property name="text">
       <string>Edge Detection</string>
      </property>
     </widget>
    </item>
    <item row="1" column="4">
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="edge_detection_mode_combobox">
      <item>
       <property name="text">
        <string extracomment="default">Luma</string>
@@ -165,14 +165,14 @@
     </widget>
    </item>
    <item row="0" column="0" rowspan="6">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="smaa_title">
      <property name="text">
       <string>SMAA Config</string>
      </property>
     </widget>
    </item>
    <item row="0" column="2">
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="enable_label">
      <property name="text">
       <string>Enable</string>
      </property>

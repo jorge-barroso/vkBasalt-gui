@@ -29,10 +29,10 @@ struct Game
 	float fxaa_edge_threshold_min;
 
 	bool smaa_enabled;
-	QString edge_detection_method;
+	QString smaa_edge_detection_method;
 	float smaa_threshold;
-	float smaa_search_steps;
-	float smaa_search_steps_diagonal;
+	float smaa_max_search_steps;
+	float smaa_max_search_steps_diagonal;
 	float smaa_corner_rounding;
 
 	bool lut_enabled;
@@ -48,9 +48,9 @@ struct Game
 			   << values_separator << game->dls_sharpness << values_separator << game->dls_denoise << values_separator
 			   << game->fxaa_enabled << values_separator << game->fxaa_quality_subpixel << values_separator
 			   << game->fxaa_edge_threshold << values_separator << game->fxaa_edge_threshold_min
-			   << values_separator << game->smaa_enabled << values_separator << game->edge_detection_method
-			   << values_separator << game->smaa_threshold << values_separator << game->smaa_search_steps
-			   << values_separator << game->smaa_search_steps_diagonal << values_separator
+			   << values_separator << game->smaa_enabled << values_separator << game->smaa_edge_detection_method
+			   << values_separator << game->smaa_threshold << values_separator << game->smaa_max_search_steps
+			   << values_separator << game->smaa_max_search_steps_diagonal << values_separator
 			   << game->smaa_corner_rounding << values_separator << game->lut_enabled << values_separator
 			   << game->lut_file_path;
 		return stream;
@@ -74,10 +74,10 @@ struct Game
 		game->fxaa_edge_threshold = values[10].toFloat();
 		game->fxaa_edge_threshold_min = values[11].toFloat();
 		game->smaa_enabled = QVariant(values[12]).toBool();
-		game->edge_detection_method = values[13];
+		game->smaa_edge_detection_method = values[13];
 		game->smaa_threshold = values[14].toFloat();
-		game->smaa_search_steps = values[15].toFloat();
-		game->smaa_search_steps_diagonal = values[16].toFloat();
+		game->smaa_max_search_steps = values[15].toFloat();
+		game->smaa_max_search_steps_diagonal = values[16].toFloat();
 		game->smaa_corner_rounding = values[17].toFloat();
 		game->lut_enabled = QVariant(values[18]).toBool();
 		game->lut_file_path = values[19];

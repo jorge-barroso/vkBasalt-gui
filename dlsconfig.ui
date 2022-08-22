@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>59</height>
+    <height>84</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,42 +15,42 @@
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,3,9">
    <item row="2" column="3">
-    <widget class="QSlider" name="horizontalSlider_2">
+    <widget class="QSlider" name="denoise_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item row="1" column="2">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="sharpness_label">
      <property name="text">
       <string>Sharpness</string>
      </property>
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="denoise_label">
      <property name="text">
       <string>Denoise</string>
      </property>
     </widget>
    </item>
    <item row="0" column="3">
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="enable_dls_checkbox">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
    <item row="0" column="2">
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="enable_label">
      <property name="text">
       <string>Enable</string>
      </property>
     </widget>
    </item>
    <item row="1" column="3">
-    <widget class="QSlider" name="horizontalSlider">
+    <widget class="QSlider" name="sharpness_slider">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -70,7 +70,7 @@
     </spacer>
    </item>
    <item row="0" column="0" rowspan="3">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="dls_title">
      <property name="text">
       <string>DLS Config</string>
      </property>

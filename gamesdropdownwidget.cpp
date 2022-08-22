@@ -3,17 +3,17 @@
 
 const QString GamesDropdownWidget::GLOBAL_VALUE{ "Global (System)" };
 
-GamesDropdownWidget::GamesDropdownWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::GamesDropdownWidget)
+GamesDropdownWidget::GamesDropdownWidget(QWidget* parent) :
+		QWidget(parent),
+		ui(new Ui::GamesDropdownWidget)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
 
 }
 
 GamesDropdownWidget::~GamesDropdownWidget()
 {
-    delete ui;
+	delete ui;
 }
 
 void GamesDropdownWidget::add_games(const QStringList& titles)

@@ -3,7 +3,11 @@
 
 #include <QMainWindow>
 #include <QDir>
+#include <map>
 #include "steamgamesmanager.h"
+#include "gameproviders.h"
+
+using GamesReferences = std::vector<std::pair<GameProviders, int>>;
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -23,6 +27,8 @@ class MainWindow : public QMainWindow
 
 	private slots:
 
+		void refresh_games();
+
 		void load_games();
 
 	private:
@@ -31,8 +37,11 @@ class MainWindow : public QMainWindow
 		QDir config_dir;
 
 		SteamGamesManager steam_games_manager;
+		GamesReferences all_games;
 
-		void load_steam_games(const bool refresh);
+		void load_games(bool refresh);
+
+		QStringList load_steam_games(bool refresh);
 };
 
 #endif // MAINWINDOW_H
